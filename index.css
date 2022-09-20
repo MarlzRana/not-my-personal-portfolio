@@ -1,0 +1,154 @@
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+body {
+  margin: 0;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var(--main-red);
+}
+
+#navbar > ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  text-align: right;
+}
+
+#navbar > ul > li {
+  margin-right: 0.5vw;
+}
+
+#navbar > ul > li > a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#welcome-section {
+  background-image: linear-gradient(62deg, #3a3d40, #181719);
+}
+
+#welcome-section > h1 {
+  margin-top: 45vh;
+  color: white;
+}
+
+#welcome-section > p {
+  color: red;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-blue);
+}
+
+#projects > header {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--main-white);
+}
+
+#show-all-button > a {
+  color: var(--main-white);
+  text-decoration: none;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2vw;
+}
+
+.projectsGrid > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-tile {
+  background-color: var(--main-gray);
+}
+
+.project-tile > a {
+  color: var(--main-white);
+  text-decoration: none;
+}
+.project-tile > a > img {
+  width: 30vw;
+  height: 50vh;
+}
+
+#show-all-button {
+  margin: 1vw;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  background-color: var(--main-gray);
+  color: var(--main-white);
+}
+
+#work-together {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-gray);
+  color: var(--main-white);
+  padding: 30vh 0vw;
+}
+
+#work-together > header {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+#social-media > a {
+  color: var(--main-white);
+  text-decoration: none;
+  margin: 3vw 1vw;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--main-gray);
+  color: var(--main-white);
+  border-top: 1vh solid var(--main-red);
+}
+
+footer > a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+@media (max-width: 800px) {
+  .projectsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 1vw;
+  }
+}
